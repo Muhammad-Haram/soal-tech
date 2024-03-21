@@ -2,8 +2,6 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    /* font-family: Arial, Helvetica, sans-serif; */
-    /* font-family: neueHassDisplay; */
 }
 
 @font-face {
@@ -55,103 +53,48 @@ body {
     flex-direction: column;
 }
 
-.show {
-    top: 0px;
-}
-
 .nav-content {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: white;
-    padding: 30px 50px;
+    padding: 40px 100px;
 }
 
-.nav-content .nav-list h2 {
-    font-size: 55px;
-    color: rgb(255, 255, 255);
-    font-family: clashDisplay;
-    text-transform: uppercase;
-    cursor: pointer;
-    margin-bottom: 15px;
-}
-
-.nav-content .nav-list .text-color {
-    color: #FCE383;
-}
-
-.nav-contact .address h3,
-.nav-contact .links h3 {
-    font-size: 20px;
-    color: rgba(255, 255, 255, 0.6);
-    font-weight: 500;
-    font-family: "Plus Jakarta Sans", sans-serif;
-}
-
-.nav-contact .address span {
-    color: #FCE383;
-}
-
-.nav-contact .address>*,
-.nav-contact .links>* {
-    margin-bottom: 20px;
-}
-
-.nav-contact .address p {
-    font-size: 16px;
-    color: white;
-    font-family: "Plus Jakarta Sans", sans-serif;
-}
-
-.nav-contact .links ul {
+.nav-buttons {
+    width: 50%;
+    padding: 10px;
     display: flex;
+    flex-direction: column;
 }
 
-.nav-contact .links ul li {
-    list-style: none;
-}
-
-.nav-contact .links ul li {
-    font-size: 27px;
-    color: #1d1c1c;
-    background-color: white;
-    width: 50px;
-    height: 50px;
-    margin-right: 20px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.5s;
-}
-
-.nav-contact .links ul li:nth-child(1):hover {
-    color: white;
-    background-color: #3b5999;
-}
-
-.nav-contact .links ul li:nth-child(2):hover {
-    color: white;
-    background-color: #000;
-
-}
-
-.nav-contact .links ul li:nth-child(3):hover {
-    background-color: rgb(10, 88, 202);
-    color: white;
-}
-
-.nav-contact .links ul li:nth-child(4):hover {
-    background-color: #dd4b39;
-    color: white;
-}
-
-.nav-contact .links a,
-#footer .footer-sec a {
-    color: #FCE383;
-    font-family: "Plus Jakarta Sans", sans-serif;
+.nav-buttons .tab-btn {
+    color: #403F3F;
+    font-size: 50px;
     font-weight: 600;
-    font-size: 12px;
+    cursor: pointer;
+    font-family: neueHassDisplayBold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.nav-buttons .active {
+    color: white;
+}
+
+.nav-list {
+    width: 50%;
+}
+
+.tabcontent {
+    width: 100%;
+    background-color: transparent;
+    margin-top: 20px;
+    display: none;
+    padding: 10px;
+    color: white;
+}
+
+.show {
+    top: 0px;
 }
 
 /* header */
