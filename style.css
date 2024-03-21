@@ -86,11 +86,18 @@ body {
 
 .tabcontent {
     width: 100%;
-    background-color: transparent;
-    margin-top: 20px;
     display: none;
-    padding: 10px;
+}
+
+.tabcontent ul li{
+    list-style: none;
+}
+
+.tabcontent ul li a{
     color: white;
+    font-family: neueHassDisplayThin;
+    text-decoration: none;
+    font-size: 38px;
 }
 
 .show {
