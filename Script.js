@@ -1,9 +1,6 @@
 let navInfo = document.querySelector(".nav-info");
 let nav = document.querySelector(".bar");
 let closeBtn = document.querySelector(".close");
-console.log(navInfo)
-console.log(closeBtn)
-console.log(nav)
 
 nav.addEventListener("click", () => {
     if (nav) {
@@ -17,16 +14,17 @@ closeBtn.addEventListener("click", () => {
     }
 })
 
-// inner navbar / tab section
+// inner navbar / nav section
 
-var allBtns = document.querySelectorAll(".tab-btn");
+let allBtns = document.querySelectorAll(".nav-btn");
+let NavBtnCont = document.querySelectorAll(".nav-btn-container");
 
 for (let b = 0; b < allBtns.length; b++) {
     allBtns[b].addEventListener("click", function () {
-        const data = this.dataset.tab;
+        const data = this.dataset.nav;
         const ids = document.getElementById(data);
+        var allContent = document.querySelectorAll(".nav-links");
 
-        var allContent = document.querySelectorAll(".tabcontent");
 
         for (let s = 0; s < allContent.length; s++) {
             allContent[s].style.display = "none";
@@ -41,4 +39,17 @@ for (let b = 0; b < allBtns.length; b++) {
     });
 }
 
-document.querySelector(".tab-btn").click();
+for (let i = 0; i < NavBtnCont.length; i++) {
+    NavBtnCont[i].addEventListener("click", function () {
+        let imgActive = document.querySelectorAll(".isActive");
+
+        for (let s = 0; s < imgActive.length; s++) {
+            // imgActive[s].style.display = "flex";
+        }
+
+        // imgActive.style.display = "none";
+    })
+}
+
+document.querySelector(".nav-btn").click();
+document.querySelectorAll(".nav-btn-container").click();
