@@ -19,6 +19,11 @@
     src: url('fonts/neueHassDisplay/NeueHaasDisplayLight.ttf');
 }
 
+@font-face {
+    font-family: neueHassDisplayThin;
+    src: url('fonts/neueHassDisplay/');
+}
+
 body {
     background-color: #000;
 }
@@ -660,8 +665,9 @@ body {
 /* customer section  */
 .customer-section {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background-color: #fff;
+    padding: 60px;
 }
 
 .customer-section .cus-sec-text {
@@ -671,9 +677,87 @@ body {
 }
 
 .customer-section .cus-sec-text .text-head {
-    
+    width: 40%;
+    margin: 15px;
+}
+
+.customer-section .cus-sec-text .text-head h1 {
+    color: #252525;
+    font-family: neueHassDisplayBold;
+    font-size: 50px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.customer-section .cus-sec-text .text-anchor {
+    display: flex;
+    align-items: center;
+}
+
+.customer-section .cus-sec-text .text-anchor a {
+    color: #0082F9;
+    text-decoration-color: #0082F9;
+    font-family: neueHassDisplayMed;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+    font-size: 18px;
+    margin-right: 10px;
 }
 
 .customer-section .cus-sec-text .text-box {
+    width: 60%;
+    padding: 50px 40px;
+    padding-bottom: 30px;
+    background-color: #0082F9;
+    margin: 15px;
+    border-radius: 10px;
+}
 
+.customer-section .cus-sec-text .text-box h2 {
+    color: #fff;
+    font-family: neueHassDisplayThin;
+    font-weight: 200;
+    font-size: 35px;
+}
+
+.customer-section .cus-sec-text .text-box p {
+    color: #fff;
+    font-family: neueHassDisplayThin;
+    margin-top: 20px;
+    text-align: end;
+}
+
+.customer-section .cus-sec-award {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
+}
+
+.customer-section .cus-sec-award h1 {
+    color: #252525;
+    font-family: neueHassDisplayMed;
+    margin-top: 60px;
+    margin-bottom: 50px;
+}
+
+.customer-section .cus-sec-award .awards {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 50px 0px;
+}
+
+.customer-section .cus-sec-award .awards img {
+    width: 70px;
+}
+
+/* testimonial sec  */
+
+.testimonial {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
