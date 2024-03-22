@@ -114,6 +114,7 @@ body {
 
 .nav-links ul li {
     list-style: none;
+    margin-bottom: 20px;
 }
 
 .nav-links ul li a {
@@ -121,7 +122,6 @@ body {
     font-family: neueHassDisplayThin;
     text-decoration: none;
     font-size: 38px;
-    margin-bottom: 20px;
 }
 
 .show {
@@ -335,7 +335,7 @@ body {
     justify-content: center;
     flex-wrap: wrap;
     gap: 15px;
-    padding: 50px;
+    padding: 60px;
 }
 
 .card {
@@ -404,30 +404,173 @@ body {
 
 .video-section {
     width: 100%;
-    height: 100vh;
-    padding: 50px;
+    min-height: 90vh;
+    width: 100%;
+    padding: 60px;
+    padding-top: 0px;
 }
 
-.video-section-1 .heading {
+.video-section .heading {
     margin-bottom: 30px;
 }
 
-.video-section-1 .heading span {
+.video-section .heading span {
     color: white;
     font-size: 50px;
     font-family: neueHassDisplayBold;
     text-transform: uppercase;
 }
 
-.video-section-1 .heading img {
+.video-section .heading img {
     width: 140px;
     height: 40px;
 }
 
-.video-section-1 p {
+.video-section p {
     margin-bottom: 50px;
     color: white;
     font-family: neueHassDisplayThin;
     letter-spacing: 1px;
     word-spacing: 1px;
+}
+
+.video {
+    width: 100%;
+    position: relative;
+}
+
+.video-btn-img {
+    position: absolute;
+    bottom: -500;
+}
+
+.video-1 {
+    position: relative;
+}
+
+.video img {
+    width: 100%;
+
+}
+
+
+
+.play-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0082F9;
+    width: 130px;
+    border-radius: 50px;
+    padding: 10px 0px;
+    cursor: pointer;
+    position: absolute;
+    top: 45%;
+    left: 45%;
+}
+
+.play-btn button {
+    background-color: transparent;
+    border: 0;
+    color: white;
+    font-weight: 500;
+    font-size: 13px;
+    word-spacing: 0px;
+    letter-spacing: 2px;
+    font-family: neueHassDisplayThin;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.play-btn img {
+    width: 15px;
+    cursor: pointer;
+}
+
+/* white and black gradient div  */
+
+.gradient-div {
+    width: 100%;
+    height: 40vh;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 51%, rgba(0, 0, 0, 1) 90%);
+}
+
+/* sticky scroller section  */
+
+.sticky-scroller {
+    background-color: white;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    padding: 70px;
+}
+
+.sticky-scroller .ss-left {
+    width: 50%;
+}
+
+.sticky-scroller .ss-left h1 {
+    font-size: 40px;
+    font-family: neueHassDisplayBold;
+    text-transform: uppercase;
+    color: #252525;
+}
+
+.sticky-scroller .ss-left p {
+    font-family: neueHassDisplayThin;
+}
+
+.sticky-scroller .ss-right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.sticky-scroller .ss-right img {
+    width: 100%;
+}
+
+/* blue circle section  */
+
+.circles-section {
+    width: 100%;
+    height: 100vh;
+    background-color: #0082F9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.circles-section-text {
+    padding-left: 60px;
+    position: absolute;
+    left: 0;
+}
+
+.circles-section-text h1 {
+    font-size: 40px;
+    color: white;
+    font-family: neueHassDisplayBold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.circles-section-text p {
+    font-family: neueHassDisplayThin;
+    color: white;
+    word-spacing: 1px;
+    letter-spacing: 1px;
+}
+
+.circles {
+    width: 70%;
+    position: absolute;
+    right: 0;
+}
+
+.circles img {
+    width: 100%;
 }
