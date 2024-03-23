@@ -946,3 +946,81 @@ body {
     position: absolute;
     margin-bottom: 0px;
 }
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: neueHassDisplayThin;
+    padding: 80px;
+    gap: 160px;
+}
+
+footer img {
+    width: 160px;
+    margin-bottom: 20px;
+}
+
+footer .fo-blue-txt {
+    font-family: neueHassDisplayThin;
+    color: #40B4E5;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+}
+
+footer .fo-tin-txt {
+    font-size: 12px;
+    margin-bottom: 0px;
+}
+
+footer .rating {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+footer p,
+footer a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    word-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+footer .fo-number {
+    margin-top: 20px;
+}
+
+footer .rating img {
+    width: 130px;
+    margin-bottom: 0;
+}
+
+footer .rating h6 {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+footer .social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+footer .social-icon img {
+    width: 20px;
+
+}
+
+footer .fo-rev {
+    margin-bottom: 30px;
+}
