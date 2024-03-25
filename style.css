@@ -66,14 +66,14 @@ body {
 
 .nav-line {
     width: 2px;
-    height: 400px;
+    height: 300px;
     background-color: #40B4E5;
     margin-right: 50px;
 }
 
 .nav-content {
     display: flex;
-    padding: 0px 100px;
+    padding: 50px 75px;
 }
 
 .nav-buttons {
@@ -92,7 +92,7 @@ body {
 .nav-buttons .nav-btn {
     width: 100%;
     color: #403F3F;
-    font-size: 45px;
+    font-size: 35px;
     font-weight: 600;
     cursor: pointer;
     font-family: neueHassDisplayBold;
@@ -116,6 +116,7 @@ body {
 
 .nav-list {
     width: 50%;
+    padding: 5px;
 }
 
 .nav-links {
@@ -132,7 +133,7 @@ body {
     color: white;
     font-family: neueHassDisplayThin;
     text-decoration: none;
-    font-size: 38px;
+    font-size: 30px;
 }
 
 .nav-contact {
@@ -178,7 +179,7 @@ body {
 }
 
 .logo img {
-    width: 150px;
+    width: 130px;
     cursor: pointer;
 }
 
@@ -788,12 +789,13 @@ body {
     width: 70px;
 }
 
-/* testimonial section  */
 
 .testimonial {
     background-color: #161616;
-    padding: 50px 0px;
+    padding: 50px 50px;
     display: flex;
+    font-family: neueHassDisplayThin;
+    font-weight: 100;
 }
 
 .tes-text {
@@ -805,120 +807,23 @@ body {
     font-size: 30px;
     font-weight: 900;
     font-family: neueHassDisplayBold;
+    margin-right: 30px;
 }
 
-.grid-container {
-    background: #161616;
-    font-family: "Rubik", sans-serif;
-    width: 70%;
+.swiper-slide {
+    display: flex;
+    color: white;
+    flex-direction: column;
+    position: relative;
 }
 
-@supports (display: grid) {
-    .grid-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: auto 1fr auto;
-        grid-template-areas: "header header header" "title title footer" "main main main";
-    }
-
-    @media screen and (max-width: 500px) {
-        .grid-container {
-            grid-template-columns: 1fr;
-            grid-template-rows: 0.3fr 1fr auto 1fr;
-            grid-template-areas: "header" "title" "main" "footer";
-        }
-    }
-
-    .grid-item {
-        color: #fff;
-        background: skyblue;
-        padding: 3.5em 1em;
-        font-size: 1em;
-        font-weight: 700;
-        overflow: hidden;
-    }
-
-    .main {
-        color: white;
-        background-color: #161616;
-        grid-area: main;
-        padding: 0;
-        overflow-x: hidden;
-        overflow-y: hidden;
-    }
-
-    .items {
-        position: relative;
-        width: 100%;
-        overflow-x: hidden;
-        overflow-y: hidden;
-        white-space: nowrap;
-        transition: all 0.2s;
-        transform: scale(1);
-        will-change: transform;
-        user-select: none;
-        cursor: pointer;
-    }
-
-    .items.active {
-        background: #161616;
-        cursor: grabbing;
-        cursor: -webkit-grabbing;
-    }
-
-    .item {
-        display: inline-block;
-        background: black;
-        height: 450px;
-        width: 400px;
-        border-bottom: 3px solid #0082F9;
-        margin: 20px 15px;
-    }
-
-    .item img {
-        width: 100%;
-        height: 50%;
-    }
-
-    .item .tes-content {
-        margin: 20px 25px;
-    }
-
-    .item .tes-content p {
-        font-size: 14px;
-        font-family: neueHassDisplayThin;
-        color: #0082F9;
-
-    }
-
-    .item .tes-content h1 {
-        font-family: neueHassDisplayThin;
-        font-weight: 200;
-        font-size: 18px;
-        margin-top: 20px;
-    }
-
-    .items::-webkit-scrollbar {
-        width: 2px;
-    }
-
-    .items::-webkit-scrollbar-track {
-        background: #5D5D5D;
-        border-radius: 10px;
-    }
-
-    .items::-webkit-scrollbar-thumb {
-        background: #ffffff;
-        border-radius: 10px;
-    }
-
-
-    @media screen and (max-width: 500px) {
-        .item {
-            min-height: 200px;
-            min-width: 200px;
-        }
-    }
+.swiper-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
 }
 
 /* Lets Talk section  */
@@ -1047,4 +952,397 @@ footer .social-icon img {
 
 footer .fo-rev {
     margin-bottom: 30px;
+}
+
+@media (max-width: 440px) {
+
+    /* nav bar section  */
+    .nav,
+    .nav-close {
+        padding: 20px 20px;
+    }
+
+    .menu-icon p {
+        margin-right: 10px;
+    }
+
+    .menu img {
+        width: 50px;
+    }
+
+    /* nav bar section  */
+
+    .nav-line {
+        height: 400px;
+        margin-right: 10px;
+    }
+
+    .nav-content {
+        padding: 30px 30px;
+        padding-top: 120px;
+    }
+
+    .nav-buttons {
+        width: 50%;
+        padding: 0px;
+    }
+
+    .nav-btn-container {
+        margin-bottom: 10px;
+    }
+
+    .nav-buttons .nav-btn {
+        font-size: 30px;
+    }
+
+    .nav-buttons .active {
+        color: white;
+    }
+
+    .nav-links ul li {
+        margin-bottom: 20px;
+    }
+
+    .nav-links ul li a {
+        font-size: 25px;
+        margin-bottom: 10px;
+    }
+
+    .nav-contact {
+        width: 100%;
+        padding: 15px;
+        text-align: right;
+        padding-right: 30px;
+        margin-bottom: 0px;
+        margin-top: 80px;
+    }
+
+    /* hero section  */
+
+    .content {
+        margin: 20px;
+        margin-top: 120px;
+        width: 80%;
+    }
+
+    .content h1 {
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+
+    .content p {
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+
+    .buttons {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .Allbtn {
+        width: 200px;
+    }
+
+    .buttons p {
+        font-size: 10px;
+        margin-bottom: 15px;
+    }
+
+    .buttons-two .btn-two-con {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .break .br-line {
+        display: none;
+    }
+
+    /* marquee section  */
+
+    .marquee h1 {
+        color: white;
+        font-family: neueHassDisplayMed;
+        text-align: center;
+        padding: 60px 0;
+        font-size: 30px;
+    }
+
+    .elem .moving .move-in img,
+    .elem .moving .move-in .elem-line {
+        margin: 0 10px;
+        display: inline-block;
+    }
+
+    /* cards container  */
+
+    .card-container {
+        height: 160vh;
+        margin-top: 0px;
+        margin-bottom: 100px;
+    }
+
+    .cards {
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .card-gradient h2 {
+        font-size: 30px;
+    }
+
+    .card {
+        width: 100%;
+        height: 450px;
+    }
+
+    /* video section  */
+
+    .video-section {
+        width: 100%;
+        min-height: 50vh;
+        width: 100%;
+        padding: 20px;
+        padding-top: 0px;
+    }
+
+    .video-section .heading {
+        margin-bottom: 30px;
+    }
+
+    .video-section .heading span {
+        font-size: 25px;
+    }
+
+    .video-section .heading img {
+        width: 100px;
+        height: 30px;
+        margin-top: 5px;
+    }
+
+    .gradient-div {
+        display: none;
+    }
+
+    .play-btn {
+        top: 40%;
+        left: 30%;
+    }
+
+    /* sticky scroller section  */
+
+    .sticky-scroller {
+        display: flex;
+        flex-direction: column;
+        padding: 20px 20px;
+    }
+
+    .sticky-scroller .ss-left {
+        width: 100%;
+        height: 25vh;
+        position: static;
+    }
+
+    .sticky-scroller .ss-right {
+        width: 100%;
+    }
+
+    .sticky-scroller .ss-left h1 {
+        font-size: 30px;
+        margin-top: 20px;
+    }
+
+    /* blue circle section  */
+
+    .circles-section {
+        width: 100%;
+        height: 70vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: static;
+        padding: 20px;
+    }
+
+    .circles-section-text {
+        width: 100%;
+        padding-left: 0px;
+        position: static;
+    }
+
+    .circles-section-text h1 {
+        font-size: 30px;
+        margin-bottom: 0px;
+    }
+
+    .circles-section-text p {
+        font-family: neueHassDisplayThin;
+        color: white;
+        word-spacing: 1px;
+        letter-spacing: 1px;
+    }
+
+    .circles {
+        width: 100%;
+        position: static;
+        right: 0;
+    }
+
+    .circles img {
+        width: 100%;
+    }
+
+    /* states section  */
+
+    .states-section {
+        width: 100%;
+        height: 180vh;
+        flex-direction: column;
+    }
+
+    .states-section h1 {
+        font-size: 50px;
+    }
+
+    .states-section p {
+        font-size: 25px;
+    }
+
+    .states-section .projects {
+        width: 100%;
+    }
+
+    .states-section .projects img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .states-section .projects .pr-text {
+        display: flex;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .states-section .projects .pr-text h1 {
+        font-size: 50px;
+    }
+
+    .states-section .hiring {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .states-section .hiring .hr-text {
+        padding: 20px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .states-section .clients {
+        width: 100%;
+    }
+
+    .states-section .clients .clients-text {
+        padding: 20px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+    }
+
+    /* customer section  */
+
+    .customer-section {
+        padding: 20px;
+        min-height: 80vh;
+    }
+
+    .customer-section .cus-sec-text {
+        flex-direction: column;
+    }
+
+    .customer-section .cus-sec-text .text-head {
+        width: 100%;
+        margin: 15px;
+    }
+
+    .customer-section .cus-sec-text .text-head h1 {
+        font-size: 30px;
+    }
+
+    .customer-section .cus-sec-text .text-anchor a {
+        font-size: 16px;
+    }
+
+    .customer-section .cus-sec-text .text-box {
+        width: 100%;
+        padding: 20px 20px;
+    }
+
+    .customer-section .cus-sec-text .text-box h2 {
+        font-size: 25px;
+    }
+
+    .customer-section .cus-sec-award {
+        flex-direction: column;
+        margin: 50px 0px;
+    }
+
+    .customer-section .cus-sec-award h1 {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .customer-section .cus-sec-award .awards {
+        margin: 0px 0px;
+    }
+
+    .customer-section .cus-sec-award .awards img {
+        width: 43px;
+        margin: 0px;
+    }
+
+    /* lets talk section  */
+
+    .letsTalk {
+        padding: 100px 75px;
+    }
+
+    /* testimonial section  */
+
+    .testimonial {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .tes-text {
+        width: 100%;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+    .swiper,
+    .mySwiper {
+        width: 100%;
+    }
+
+    /* footer  */
+
+    footer {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        color: white;
+        font-family: neueHassDisplayThin;
+        padding: 40px;
+        gap: 120px;
+    }
+
 }
