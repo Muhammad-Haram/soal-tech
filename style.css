@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    /* outline: 1px solid red; */
 }
 
 @font-face {
@@ -30,15 +31,11 @@
     src: url('fonts/neueHassDisplay/');
 }
 
-body {
-    background-color: #000;
-}
-
 .bg-image {
     width: 100%;
     height: 100vh;
     background-color: #000;
-    background-image: url("img/hero\ imge\ copy\ 2.png");
+    background-image: url("img/hero-image.png");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -47,9 +44,8 @@ body {
 
 .bg-black {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background-image: linear-gradient(rgba(0, 0, 0, 0.911) 2%, rgba(0, 0, 0, 0.651)8%);
-    position: absolute;
 }
 
 .nav-info {
@@ -57,7 +53,7 @@ body {
     height: 100vh;
     background-color: #060606;
     position: fixed;
-    top: -100%;
+    top: -150%;
     transition: 0.3s;
     z-index: 8;
     display: flex;
@@ -73,7 +69,7 @@ body {
 
 .nav-content {
     display: flex;
-    padding: 50px 75px;
+    padding: 25px 75px;
 }
 
 .nav-buttons {
@@ -87,6 +83,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 20px;
 }
 
 .nav-buttons .nav-btn {
@@ -99,6 +96,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    line-height: 1;
 }
 
 .nav-buttons .active {
@@ -115,8 +113,8 @@ body {
 }
 
 .nav-list {
-    width: 50%;
-    padding: 5px;
+    width: 48%;
+    padding: 0px 5px;
 }
 
 .nav-links {
@@ -134,18 +132,16 @@ body {
     font-family: neueHassDisplayThin;
     text-decoration: none;
     font-size: 30px;
+    line-height: 1;
 }
 
 .nav-contact {
     width: 100%;
-    padding: 15px;
     text-align: right;
     padding-right: 80px;
-    margin-bottom: 100px;
 }
 
 .nav-contact>* {
-    margin-top: 10px;
     cursor: pointer;
 }
 
@@ -210,9 +206,9 @@ body {
 /* hero content */
 
 .content {
-    margin: 80px;
-    margin-top: 200px;
-    width: 70%;
+    position: absolute;
+    bottom: 10%;
+    margin: 0 80px;
 }
 
 .content h1 {
@@ -222,6 +218,7 @@ body {
     text-transform: uppercase;
     margin-bottom: 30px;
     font-family: neueHassDisplayBold;
+    max-width: 750px;
 }
 
 .content span {
@@ -276,6 +273,7 @@ body {
 }
 
 .buttons-two .btn-two-con {
+    flex-wrap: wrap;
     display: flex;
     gap: 20px;
 }
@@ -361,22 +359,19 @@ body {
 
 .card-container {
     width: 100%;
-    height: 100vh;
     background-color: black;
-    margin-top: 50px;
 }
 
 .cards {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
     gap: 15px;
     padding: 60px;
 }
 
 .card {
-    background-image: url('img/steptodown\ 1.png');
+    background-image: url('img/steptodown1.png');
     width: 32%;
     height: 500px;
     background-position: center center;
@@ -387,11 +382,11 @@ body {
 }
 
 .img2 {
-    background-image: url('img/steptodown\ 2.png');
+    background-image: url('img/steptodown2.png');
 }
 
 .img3 {
-    background-image: url('img/steptodown\ 3.png');
+    background-image: url('img/steptodown3.png');
 }
 
 .card-gradient {
@@ -441,14 +436,14 @@ body {
 
 .video-section {
     width: 100%;
-    min-height: 90vh;
-    width: 100%;
     padding: 60px;
     padding-top: 0px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 50%, rgba(9, 9, 121, 0) 70%, rgba(255, 255, 255, 1) 100%);
 }
 
 .video-section .heading {
     margin-bottom: 30px;
+    max-width: 750px;
 }
 
 .video-section .heading span {
@@ -476,11 +471,6 @@ body {
     position: relative;
 }
 
-.video-btn-img {
-    position: absolute;
-    bottom: -500;
-}
-
 .video-1 {
     position: relative;
 }
@@ -500,8 +490,9 @@ body {
     padding: 10px 0px;
     cursor: pointer;
     position: absolute;
-    top: 45%;
-    left: 45%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .play-btn button {
@@ -538,12 +529,12 @@ body {
     width: 100%;
     min-height: 100vh;
     display: flex;
-    padding: 120px 70px;
+    padding: 70px;
 }
 
 .sticky-scroller .ss-left {
     width: 50%;
-    height: 20vh;
+    height: 250px;
     position: sticky;
     top: 20px;
 }
@@ -619,10 +610,10 @@ body {
 
 .states-section {
     width: 100%;
-    height: 90vh;
     display: flex;
-    align-items: center;
+    align-items: start;
     justify-content: center;
+    background-color: #000;
 }
 
 .states-section h1 {
@@ -782,7 +773,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 50px 0px;
 }
 
 .customer-section .cus-sec-award .awards img {
@@ -799,7 +789,7 @@ body {
 }
 
 .tes-text {
-    width: 30%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -884,6 +874,7 @@ footer {
     font-family: neueHassDisplayThin;
     padding: 80px;
     gap: 150px;
+    background-color: #000;
 }
 
 footer img {
@@ -954,7 +945,7 @@ footer .fo-rev {
     margin-bottom: 30px;
 }
 
-@media (max-width: 440px) {
+@media screen and (min-width: 480px) and (max-width:768px) {
 
     /* nav bar section  */
     .nav,
@@ -1019,11 +1010,11 @@ footer .fo-rev {
 
     /* hero section  */
 
-    .content {
+    /* .content {
         margin: 20px;
         margin-top: 120px;
         width: 80%;
-    }
+    } */
 
     .content h1 {
         font-size: 30px;
@@ -1076,12 +1067,6 @@ footer .fo-rev {
 
     /* cards container  */
 
-    .card-container {
-        height: 160vh;
-        margin-top: 0px;
-        margin-bottom: 100px;
-    }
-
     .cards {
         gap: 15px;
         padding: 15px;
@@ -1099,11 +1084,8 @@ footer .fo-rev {
     /* video section  */
 
     .video-section {
-        width: 100%;
-        min-height: 50vh;
-        width: 100%;
-        padding: 20px;
-        padding-top: 0px;
+        text-align: center;
+        padding: 15px;
     }
 
     .video-section .heading {
@@ -1111,7 +1093,7 @@ footer .fo-rev {
     }
 
     .video-section .heading span {
-        font-size: 25px;
+        font-size: 30px;
     }
 
     .video-section .heading img {
@@ -1124,11 +1106,6 @@ footer .fo-rev {
         display: none;
     }
 
-    .play-btn {
-        top: 40%;
-        left: 30%;
-    }
-
     /* sticky scroller section  */
 
     .sticky-scroller {
@@ -1139,8 +1116,9 @@ footer .fo-rev {
 
     .sticky-scroller .ss-left {
         width: 100%;
-        height: 25vh;
+        height: 100%;
         position: static;
+        text-align: center;
     }
 
     .sticky-scroller .ss-right {
@@ -1156,7 +1134,7 @@ footer .fo-rev {
 
     .circles-section {
         width: 100%;
-        height: 70vh;
+        height: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -1197,7 +1175,6 @@ footer .fo-rev {
 
     .states-section {
         width: 100%;
-        height: 180vh;
         flex-direction: column;
     }
 
@@ -1241,6 +1218,8 @@ footer .fo-rev {
         flex-direction: row;
         align-items: center;
         gap: 20px;
+        justify-content: center;
+
     }
 
     .states-section .clients {
@@ -1253,6 +1232,8 @@ footer .fo-rev {
         flex-direction: row;
         align-items: center;
         gap: 20px;
+        justify-content: center;
+
     }
 
     /* customer section  */
@@ -1288,18 +1269,15 @@ footer .fo-rev {
         font-size: 25px;
     }
 
-    .customer-section .cus-sec-award {
-        flex-direction: column;
-        margin: 50px 0px;
-    }
-
     .customer-section .cus-sec-award h1 {
         margin-top: 30px;
         margin-bottom: 30px;
     }
 
     .customer-section .cus-sec-award .awards {
-        margin: 0px 0px;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
     }
 
     .customer-section .cus-sec-award .awards img {
@@ -1310,7 +1288,7 @@ footer .fo-rev {
     /* lets talk section  */
 
     .letsTalk {
-        padding: 100px 75px;
+        padding: 50px;
     }
 
     /* testimonial section  */
@@ -1319,6 +1297,7 @@ footer .fo-rev {
         display: flex;
         flex-direction: column;
         width: 100%;
+        padding: 50px 20px;
     }
 
     .tes-text {
@@ -1343,6 +1322,396 @@ footer .fo-rev {
         font-family: neueHassDisplayThin;
         padding: 40px;
         gap: 120px;
+    }
+
+}
+
+
+@media (max-width: 479px) {
+
+    /* nav bar section  */
+    .nav,
+    .nav-close {
+        padding: 20px 20px;
+    }
+
+    .menu-icon p {
+        margin-right: 10px;
+    }
+
+    .menu img {
+        width: 50px;
+    }
+
+    /* nav bar section  */
+
+    .nav-line {
+        height: 400px;
+        margin-right: 10px;
+    }
+
+    .nav-content {
+        padding: 10px;
+    }
+
+    .nav-buttons {
+        width: 50%;
+        padding: 0px;
+    }
+
+    .nav-btn-container {
+        margin-bottom: 10px;
+    }
+
+    .nav-buttons .nav-btn {
+        font-size: 30px;
+    }
+
+    .nav-buttons .active {
+        color: white;
+    }
+
+    .nav-links ul li {
+        margin-bottom: 10px;
+    }
+
+    .nav-links ul li a {
+        font-size: 25px;
+        margin-bottom: 10px;
+    }
+
+    .nav-contact {
+        text-align: right;
+        padding-right: 10px;
+        margin-bottom: 10px;
+    }
+
+    /* hero section  */
+
+    .content {
+        text-align: center;
+        margin: 0px;
+        top: 50%;
+        transform: translateY(-50%);
+        bottom: auto;
+    }
+
+    .content h1 {
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+
+    .content p {
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+
+    .buttons {
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .Allbtn {
+        width: 200px;
+    }
+
+    .buttons p {
+        font-size: 10px;
+        margin-bottom: 15px;
+    }
+
+    .buttons-two .btn-two-con {
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .break .br-line {
+        display: none;
+    }
+
+    /* marquee section  */
+
+    .marquee h1 {
+        color: white;
+        font-family: neueHassDisplayMed;
+        text-align: center;
+        padding: 60px 0;
+        font-size: 30px;
+    }
+
+    .elem .moving .move-in img,
+    .elem .moving .move-in .elem-line {
+        margin: 0 10px;
+        display: inline-block;
+    }
+
+    /* cards container  */
+
+    .cards {
+        gap: 15px;
+        padding: 15px;
+        flex-wrap: wrap;
+    }
+
+    .card-gradient h2 {
+        font-size: 30px;
+    }
+
+    .card {
+        width: 100%;
+        height: 450px;
+    }
+
+    /* video section  */
+
+    .video-section {
+        text-align: center;
+        padding: 15px;
+    }
+
+    .video-section .heading {
+        margin-bottom: 30px;
+    }
+
+    .video-section .heading span {
+        font-size: 25px;
+    }
+
+    .video-section .heading img {
+        width: 100px;
+        height: 30px;
+        margin-top: 5px;
+    }
+
+    .gradient-div {
+        display: none;
+    }
+
+    /* sticky scroller section  */
+
+    .sticky-scroller {
+        display: flex;
+        flex-direction: column;
+        padding: 20px 20px;
+    }
+
+    .sticky-scroller .ss-left {
+        width: 100%;
+        height: 100%;
+        position: static;
+        text-align: center;
+    }
+
+    .sticky-scroller .ss-right {
+        width: 100%;
+    }
+
+    .sticky-scroller .ss-left h1 {
+        font-size: 30px;
+        margin-top: 20px;
+    }
+
+    /* blue circle section  */
+
+    .circles-section {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: static;
+        padding: 20px;
+    }
+
+    .circles-section-text {
+        width: 100%;
+        text-align: center;
+        padding-left: 0px;
+        position: static;
+    }
+
+    .circles-section-text h1 {
+        font-size: 30px;
+        margin-bottom: 0px;
+    }
+
+    .circles-section-text p {
+        font-family: neueHassDisplayThin;
+        color: white;
+        word-spacing: 1px;
+        letter-spacing: 1px;
+    }
+
+    .circles {
+        width: 100%;
+        position: static;
+        right: 0;
+    }
+
+    .circles img {
+        width: 100%;
+    }
+
+    /* states section  */
+
+    .states-section {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .states-section h1 {
+        font-size: 50px;
+    }
+
+    .states-section p {
+        font-size: 25px;
+    }
+
+    .states-section .projects {
+        width: 100%;
+    }
+
+    .states-section .projects img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .states-section .projects .pr-text {
+        display: flex;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .states-section .projects .pr-text h1 {
+        font-size: 50px;
+    }
+
+    .states-section .hiring {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .states-section .hiring .hr-text {
+        padding: 20px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .states-section .clients {
+        width: 100%;
+    }
+
+    .states-section .clients .clients-text {
+        padding: 20px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+        justify-content: center;
+
+    }
+
+    /* customer section  */
+
+    .customer-section {
+        padding: 20px;
+        min-height: 80vh;
+    }
+
+    .customer-section .cus-sec-text {
+        flex-direction: column;
+    }
+
+    .customer-section .cus-sec-text .text-head {
+        width: 100%;
+        margin: 15px;
+    }
+
+    .customer-section .cus-sec-text .text-head h1 {
+        font-size: 30px;
+    }
+
+    .customer-section .cus-sec-text .text-anchor a {
+        font-size: 16px;
+    }
+
+    .customer-section .cus-sec-text .text-box {
+        width: 100%;
+        padding: 20px 20px;
+    }
+
+    .customer-section .cus-sec-text .text-box h2 {
+        font-size: 25px;
+    }
+
+    .customer-section .cus-sec-award h1 {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .customer-section .cus-sec-award .awards {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .customer-section .cus-sec-award .awards img {
+        width: 43px;
+        margin: 0px;
+    }
+
+    /* lets talk section  */
+
+    .letsTalk {
+        padding: 50px;
+    }
+
+    /* testimonial section  */
+
+    .testimonial {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 50px 20px;
+    }
+
+    .tes-text {
+        width: 100%;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+    .swiper,
+    .mySwiper {
+        width: 100%;
+    }
+
+    /* footer  */
+
+    footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        color: white;
+        font-family: neueHassDisplayThin;
+        padding: 30px;
+        gap: 20px;
+    }
+    .footer{
+        text-align: center;
+    }
+
+    footer .rating{
+        justify-content: center;
     }
 
 }
