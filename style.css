@@ -614,10 +614,6 @@
     margin-bottom: 0;
 }
 
-/* .sticky-scroller .ss-right img {
-    width: 100%;
-} */
-
 /* blue circle section  */
 
 .circles-section {
@@ -1064,14 +1060,6 @@ footer .fo-rev {
         margin-bottom: 0px;
         margin-top: 80px;
     }
-
-    /* hero section  */
-
-    /* .content {
-        margin: 20px;
-        margin-top: 120px;
-        width: 80%;
-    } */
 
     .content h1 {
         font-size: 30px;
@@ -1568,6 +1556,10 @@ footer .fo-rev {
     .sticky-scroller .ss-left h1 {
         font-size: 30px;
         margin-top: 20px;
+    }
+
+    .ss-right .ss-right-card {
+        width: 100%;
     }
 
     /* blue circle section  */
