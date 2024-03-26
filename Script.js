@@ -44,17 +44,12 @@ for (let i = 0; i < NavBtnCont.length; i++) {
         let imgActive = document.querySelectorAll(".isActive");
 
         for (let s = 0; s < imgActive.length; s++) {
-            // imgActive[s].style.display = "flex";
         }
-
-        // imgActive.style.display = "none";
     })
 }
 
 document.querySelector(".nav-btn").click();
-// document.querySelectorAll(".nav-btn-container").click();
-
-// testimonial sec js 
+// testimonial sec js
 
 // const slider = document.querySelector('.items');
 // let isDown = false;
