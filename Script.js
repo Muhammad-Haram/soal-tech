@@ -83,6 +83,7 @@ var swiper = new Swiper(".mySwiper", {
 
 let counters = document.querySelectorAll(".counter span");
 let container = document.querySelector(".counter");
+let hiringCount = document.querySelector(".hr-count");
 
 let activated = false;
 
@@ -91,15 +92,21 @@ window.addEventListener("scroll", () => {
     if (pageYOffset > container.offsetTop - container.offsetHeight - 600 && activated === false) {
         counters.forEach((counter) => {
             counter.innerText = 0;
+            hiringCount.innerText = 0;
             let count = 0;
+            let num = 0;
             function updateCount() {
                 let data = counter.getAttribute("data-count");
-                if (count < data) {
-                    count = count + 4;
+                let data2 = hiringCount.getAttribute("data-count-2");
+                if (count < data && count < data2) {
+                    count = count + 3;
+                    num = num + 5;
                     counter.innerText = count;
+                    hiringCount.innerText = num;
                     setTimeout(updateCount, 0);
                 } else {
                     counter.innerText = data;
+                    hiringCount.innerText = data2;
                 };
             };
             updateCount();
