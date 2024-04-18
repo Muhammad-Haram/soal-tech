@@ -50,7 +50,6 @@ for (let i = 0; i < NavBtnCont.length; i++) {
 
 document.querySelector(".nav-btn").click();
 
-
 // swiper js
 
 var swiper = new Swiper(".mySwiper", {
@@ -78,4 +77,33 @@ var swiper = new Swiper(".mySwiper", {
             spaceBetween: 50,
         },
     },
+});
+
+// state section/ increase counter
+
+let counters = document.querySelectorAll(".counter span");
+let container = document.querySelector(".counter");
+
+let activated = false;
+
+window.addEventListener("scroll", () => {
+
+    if (pageYOffset > container.offsetTop - container.offsetHeight - 600 && activated === false) {
+        counters.forEach((counter) => {
+            counter.innerText = 0;
+            let count = 0;
+            function updateCount() {
+                let data = counter.getAttribute("data-count");
+                if (count < data) {
+                    count = count + 4;
+                    counter.innerText = count;
+                    setTimeout(updateCount, 0);
+                } else {
+                    counter.innerText = data;
+                };
+            };
+            updateCount();
+            activated = true;
+        });
+    };
 });
